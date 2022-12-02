@@ -46,7 +46,13 @@ int [,] matrix3=new int [row,column];
     {
         for (int j = 0; j <matrix3.GetLength(1); j++)
         {
-            matrix3 [i,j]=matrix1[i,j]*matrix2[i,j];
+           int sum=0;
+           for (int k = 0; k <matrix1.GetLength(0); k++)
+           {
+            sum+=matrix1[i,k]*matrix2[k,j];
+           }
+            Console.Write((matrix3[i,j]=sum)+" ");
+            
          }
-    };
-PrintMatrix(matrix3);
+    Console.WriteLine();
+    }
